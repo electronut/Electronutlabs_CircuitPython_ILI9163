@@ -20,7 +20,7 @@ display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs)
 display = electronutlabs_ili9163.ILI9163(display_bus, width=160, height=128)
 
 # Make the display context
-splash = displayio.Group(max_size=10)
+splash = displayio.Group()
 display.show(splash)
 
 color_bitmap = displayio.Bitmap(160, 128, 1)
